@@ -1,0 +1,56 @@
+@keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes scroll-top {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+  @keyframes scroll-bottom {
+    0% {
+      transform: translateY(-50%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  
+  /* Apply infinite linear animation */
+  .scroll-left,
+  .scroll-right,
+  .scroll-top,
+  .scroll-bottom {
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .scroll-left {
+    animation-name: scroll-left;
+  }
+  .scroll-right {
+    animation-name: scroll-right;
+  }
+  .scroll-top {
+    animation-name: scroll-top;
+  }
+  .scroll-bottom {
+    animation-name: scroll-bottom;
+  }
+  
