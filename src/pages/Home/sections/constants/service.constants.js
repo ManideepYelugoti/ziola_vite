@@ -1,7 +1,7 @@
-import MononuclearCells from "../../../assets/services/MononuclearCells.jpg";
-import ffpe from "../../../assets/services/ffpe.jpg";
-import analysis from "../../../assets/services/analysis.jpg";
-import biosample from "../../../assets/services/biosample.jpg";
+import MononuclearCells from "../../../../assets/services/MononuclearCells.jpg";
+import ffpe from "../../../../assets/services/ffpe.jpg";
+import analysis from "../../../../assets/services/analysis.jpg";
+import biosample from "../../../../assets/services/biosample.jpg";
 
 
 export const services = [

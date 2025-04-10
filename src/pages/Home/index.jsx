@@ -5,6 +5,8 @@ import slider1 from "../../assets/slider1.jpg";
 import slider2 from "../../assets/slider2.jpg";
 import slider3 from "../../assets/slider3.jpg";
 import slider4 from "../../assets/slider4.jpg";
+import Projects from "./sections/projects";
+import SpecializedServices from "./sections/specialized-services";
 import Services from "./sections/services";
 
 3;
@@ -43,7 +45,9 @@ const Home = () => {
           />
         </div>
       </div>
-     <Services  />
+      {/* <Services  width={1000} height={300} /> */}
+      <SpecializedServices/>
+     <Projects />
     </div>
   );
 };
