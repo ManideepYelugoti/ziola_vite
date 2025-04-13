@@ -6,8 +6,11 @@ import slider2 from "../../assets/slider2.jpg";
 import slider3 from "../../assets/slider3.jpg";
 import slider4 from "../../assets/slider4.jpg";
 import Projects from "./sections/projects";
-import SpecializedServices from "./sections/specialized-services";
 import Services from "./sections/services";
+import SpecializedServices from "./sections/specialized-services";
+import Network from "./sections/network";
+import Management from "./sections/management";
+import WhyUs from "./sections/why-us";
 
 3;
 const images = [slider1, slider2, slider3, slider4];
@@ -45,9 +48,12 @@ const Home = () => {
           />
         </div>
       </div>
-      {/* <Services  width={1000} height={300} /> */}
+      <Services  width={1000} height={600} />
       <SpecializedServices/>
      <Projects />
+     <Network/>
+     <Management/>
+     <WhyUs/>
     </div>
   );
 };

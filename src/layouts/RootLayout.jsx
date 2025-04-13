@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import React from "react";
 import { Outlet } from "react-router-dom";
@@ -9,7 +10,7 @@ const RootLayout = () => {
       <main className="flex-grow pt-24"> {/* this fixes the overlap */}
         <Outlet />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
