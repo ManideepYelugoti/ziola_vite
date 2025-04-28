@@ -1,5 +1,6 @@
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 import logo from "../../assets/ziola.png";
 
@@ -18,7 +19,11 @@ const navItems = [
   },
   {
     label: "About",
-    submenu: ["About Company", "Vision", "Mission"],
+    submenu: [
+      { name: "About Company", path: "/about/aboutcompany" },
+      { name: "Vision", path: "/about/vision" },
+      { name: "Mission", path: "/about/mission" },
+    ],
   },
 ];
 
@@ -51,18 +56,20 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white fixed top-0 left-0 right-0 sm:mt-0 z-50  md:mt-0" ref={navRef}>
+    <nav
+      className="bg-white fixed top-0 left-0 right-0 sm:mt-0 z-50  md:mt-0"
+      ref={navRef}
+    >
       <div className="max-w-8xl mx-auto px-4 sm:px-4 lg:px-8">
         <div className="flex justify-between h-16 items-center ">
           {/* Logo */}
-          <a href="/" >
-          <img
-            src={logo}
-            alt="Logo"
-            className="max-h-32 w-auto object-contain p-4"
-          />
-
-          </a>
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Logo"
+              className="max-h-32 w-auto object-contain p-4"
+            />
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex space-x-6 items-center">
@@ -81,14 +88,14 @@ export default function Navbar() {
                   }`}
                 >
                   {submenu.map((item) => (
-                    <a
-                      key={item}
-                      href={`/${item.toLowerCase()}`}
+                    <Link
+                      key={item.name || item}
+                      to={item.path || `/${label.toLowerCase()}`}
                       onClick={handleMenuItemClick}
                       className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                     >
-                      {item}
-                    </a>
+                      {item.name || item}
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -136,14 +143,14 @@ export default function Navbar() {
               className={`px-4 ${openDropdown === label ? "block" : "hidden"}`}
             >
               {submenu.map((item) => (
-                <a
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
+                <Link
+                  key={item.name || item}
+                  to={item.path || `/${label.toLowerCase()}`}
                   onClick={handleMenuItemClick}
                   className="block py-2 pl-4 text-sm text-gray-600 hover:text-black"
                 >
-                  {item}
-                </a>
+                  {item.name || item}
+                </Link>
               ))}
             </div>
           </div>
